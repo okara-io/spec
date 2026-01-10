@@ -1,0 +1,11 @@
+[package]
+name = "okara-spec"
+version = "0.1.0"
+edition = "2024"
+description = "Formal specification and schema definitions for Okara morphisms."
+license = "MIT"
+repository = "https://github.com/okara-io/spec"
+homepage = "http://okara-project.org"
+readme = "README.md"
+
+[dependencies]
