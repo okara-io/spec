@@ -1,0 +1,29 @@
+syntax = "proto3";
+package okara.core;
+
+enum Status {
+  STATUS_UNIT_UNSPECIFIED = 0;
+  STATUS_ZERO = 1;
+}
+
+message Morphism {
+  Status domain = 1;
+  Status codomain = 2;
+  string label = 3;
+}
+
+message Context {
+  map<string, Element> elements = 1;
+}
+
+message Element {
+  oneof datum {
+    string value = 1;
+    Context context = 2;
+  }
+}
+
+message Composition {
+  string label = 1;
+  repeated Morphism path = 2;
+}
